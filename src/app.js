@@ -1,4 +1,4 @@
-import { openSync, closeSync, writeSync } from "fs";
+Deimport { openSync, closeSync, writeSync } from "fs";
 import { outbox } from "file-transfer";
 
 // log something
@@ -7,9 +7,9 @@ import { outbox } from "file-transfer";
 
 var fileName = "fitbit-logger"
 var logFileEmpty = true
-var doConsoleLog = false
+var doConsoleLog = true
 var defaultConsole = {}
-var replaceConsole = false
+var replaceConsole = true
 var prefix = 'App'
 
 const init = (options) => {
@@ -29,7 +29,7 @@ const init = (options) => {
       defaultConsole[type](...args);
 
       if (replaceConsole) {
-        args.forEach(arg => writeLogToFile(`${type.toUpperCase()}: ${arg}`))
+        args.forEach(arg => writeLogToFile(type.toUpperCase()}
       }
     }
   });
